@@ -1,5 +1,5 @@
 import "../styles/TodoForm.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import TodoList from "./TodoList";
@@ -19,6 +19,7 @@ function TodoForm() {
   const [deadline, setDeadline] = useState(new Date());
   const [editTask, setEditTask] = useState(null);
   const [editInputValue, setEditInputValue] = useState("");
+  const selector = useRef();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -110,11 +111,11 @@ function TodoForm() {
           onChange={inputHandler}
         ></input>
 
-        <select className="sort-selector">
-          <option>Default</option>
-          <option>Sort by name</option>
-          <option>Sort by deadline</option>
-          <option>Sort by completion</option>
+        <select className="sort-selector" ref={selector}>
+          <option name="default">Default</option>
+          <option name="name">Sort by name</option>
+          <option name="deadline">Sort by deadline</option>
+          <option name="completion">Sort by completion</option>
         </select>
       </div>
 
