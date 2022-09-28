@@ -1,0 +1,77 @@
+.list-wrapper {
+  margin-top: 20px;
+  padding-left: 277px;
+  padding-right: 277px;
+}
+
+.list-div {
+  padding-top: 10px;
+}
+
+.list-elements-wrapper {
+  display: flex;
+}
+
+.task-list {
+  list-style-type: none;
+}
+
+.list-element {
+  background: linear-gradient(rgb(106, 0, 255), rgb(166, 0, 255));
+  padding: 10px;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  text-align: left;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.delete-btn {
+  background: linear-gradient(rgb(106, 0, 255), rgb(166, 0, 255));
+  width: 60px;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.edit-btn {
+  background: linear-gradient(rgb(106, 0, 255), rgb(166, 0, 255));
+  width: 60px;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.complete-btn {
+  background: linear-gradient(rgb(106, 0, 255), rgb(166, 0, 255));
+  width: 60px;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.task-date-complete {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deadline {
+  padding-right: 20px;
+}

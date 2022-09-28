@@ -1,0 +1,12 @@
+.App {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 50px;
+  background: -webkit-linear-gradient(rgb(106, 0, 255), rgb(166, 0, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

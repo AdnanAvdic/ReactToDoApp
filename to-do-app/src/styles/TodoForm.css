@@ -1,0 +1,61 @@
+.form-wrapper {
+  margin-top: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.task-input {
+  margin-bottom: 5px;
+  padding: 10px;
+  width: 50%;
+  background-color: rgb(39, 39, 54);
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(166, 0, 255);
+}
+
+.search-input {
+  margin-top: 60px;
+  padding: 10px;
+  width: 42%;
+  background-color: rgb(39, 39, 54);
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(166, 0, 255);
+  text-align: center;
+}
+
+.add-btn {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 20px;
+  background: linear-gradient(rgb(106, 0, 255), rgb(166, 0, 255));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.date-picker-title {
+  font-size: 20px;
+  color: white;
+}
+
+.react-datepicker-wrapper {
+  width: 15% !important;
+}
+
+.react-datepicker__input-container input {
+  text-align: center;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 20px;
+  width: 70%;
+  background: linear-gradient(rgb(106, 0, 255), rgb(166, 0, 255));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
