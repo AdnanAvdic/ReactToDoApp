@@ -41,6 +41,7 @@ function TodoForm() {
     const editedTasks = [...tasks].map((element) => {
       if (element.id === id) {
         element.text = editInputValue;
+        element.created = new Date().toLocaleTimeString();
       }
       return element;
     });
