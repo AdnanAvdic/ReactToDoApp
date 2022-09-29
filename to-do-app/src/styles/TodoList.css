@@ -98,3 +98,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.sort-selector > option {
+  background-color: rgb(106, 0, 255);
+}

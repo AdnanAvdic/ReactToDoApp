@@ -1,9 +1,10 @@
 import "../styles/TodoForm.css";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import TodoList from "./TodoList";
 import FilteredList from "./FilteredList";
+import Select from "react-select";
 
 function TodoForm() {
   const [tasks, setTasks] = useState(
@@ -19,7 +20,12 @@ function TodoForm() {
   const [deadline, setDeadline] = useState(new Date());
   const [editTask, setEditTask] = useState(null);
   const [editInputValue, setEditInputValue] = useState("");
-  const selector = useRef();
+
+  const options = [
+    { value: "name", label: "Sort by name" },
+    { value: "time-added", label: "Sort by time added" },
+    { value: "completion", label: "Sort by completion" },
+  ];
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -81,6 +87,16 @@ function TodoForm() {
     setFilteredInputValue(filterValue);
   }
 
+  function changeSelected(selectedOption) {
+    if (selectedOption.value === "name") {
+      setTasks([...tasks].sort((a, b) => (a.text > b.text ? 1 : -1)));
+    } else if (selectedOption.value === "time-added") {
+      setTasks([...tasks].sort((a, b) => (a.id > b.id ? 1 : -1)));
+    } else if (selectedOption.value === "completion") {
+      setTasks([...tasks].sort((a, b) => (a.completed > b.completed ? -1 : 1)));
+    }
+  }
+
   return (
     <div className="form-wrapper">
       <form className="form" onSubmit={handleSubmit}>
@@ -111,12 +127,7 @@ function TodoForm() {
           onChange={inputHandler}
         ></input>
 
-        <select className="sort-selector" ref={selector}>
-          <option name="default">Default</option>
-          <option name="name">Sort by name</option>
-          <option name="deadline">Sort by deadline</option>
-          <option name="completion">Sort by completion</option>
-        </select>
+        <Select options={options} onChange={changeSelected} />
       </div>
 
       {filteredInputValue === "" ? (
