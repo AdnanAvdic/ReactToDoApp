@@ -48,7 +48,6 @@ function TodoForm() {
     const editedTasks = [...tasks].map((element) => {
       if (element.id === id) {
         element.text = editInputValue;
-        element.created = new Date().toLocaleTimeString();
       }
       return element;
     });
@@ -119,7 +118,7 @@ function TodoForm() {
         onSelect={(date) => setDeadline(date)}
       />
 
-      <div>
+      <div className="search-select-wrapper">
         <input
           type="text"
           placeholder="Search..."

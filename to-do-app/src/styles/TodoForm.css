@@ -18,7 +18,7 @@
 .search-input {
   margin-top: 60px;
   padding: 10px;
-  width: 42%;
+  width: 43%;
   background-color: rgb(39, 39, 54);
   color: white;
   font-size: 20px;
@@ -58,4 +58,17 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.search-select-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.css-b62m3t-container {
+  width: 15%;
+  margin-top: auto;
+  margin-left: 10px;
+  margin-bottom: 3px;
 }
