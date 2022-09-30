@@ -90,7 +90,7 @@ function TodoForm() {
     if (selectedOption.value === "name") {
       setTasks([...tasks].sort((a, b) => (a.text > b.text ? 1 : -1)));
     } else if (selectedOption.value === "time-added") {
-      setTasks([...tasks].sort((a, b) => (a.id > b.id ? 1 : -1)));
+      setTasks([...tasks].sort((a, b) => (a.created > b.created ? 1 : -1)));
     } else if (selectedOption.value === "completion") {
       setTasks([...tasks].sort((a, b) => (a.completed > b.completed ? -1 : 1)));
     }
